@@ -7,7 +7,7 @@ jobs:
  deploy:
    runs-on: macos-latest
    steps:
-     - uses: actions/checkout@v2
+     - uses: actions/checkout@master
  
      - name: Set up ruby env
        uses: ruby/setup-ruby@v1.138.0
@@ -31,7 +31,7 @@ jobs:
          SIGNING_KEY_FILE_PATH: signing-cert.p12
  
      - name: Upload app-store ipa and dsyms to artifacts
-       uses: actions/upload-artifact@v2
+       uses: actions/upload-artifact@master
        with:
          name: app-store ipa & dsyms
          path: |
